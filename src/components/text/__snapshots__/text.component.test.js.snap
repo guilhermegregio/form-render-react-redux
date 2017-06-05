@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render text component 1`] = `
+<div>
+  <div
+    data-reactroot=""
+    class="text-component group text"
+  >
+    <input
+      type="text"
+      id="text"
+      name="text"
+      placeholder=""
+      required=""
+      value="test value"
+    />
+    <span
+      class="highlight"
+    />
+    <span
+      class="bar"
+    />
+    <label>
+      <!-- react-text: 6 -->
+      text
+      <!-- /react-text -->
+      <!-- react-text: 7 -->
+      :
+      <!-- /react-text -->
+    </label>
+  </div>
+</div>
+`;

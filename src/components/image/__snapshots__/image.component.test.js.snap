@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render image component 1`] = `
+<div>
+  <div
+    data-reactroot=""
+    class="image-component group image"
+  >
+    <img
+      name="Image"
+      alt="Image"
+    />
+  </div>
+</div>
+`;

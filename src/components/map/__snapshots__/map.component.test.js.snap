@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render map component 1`] = `
+<div>
+  <div
+    data-reactroot=""
+    class="map-component group map"
+  />
+</div>
+`;
