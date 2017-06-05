@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render app container 1`] = `
+<div>
+  <div
+    data-reactroot=""
+  >
+    <div>
+      <div
+        class="text-component group undefined"
+      >
+        <input
+          type="text"
+          id="txtFullname"
+          name="txtFullname"
+          placeholder=""
+          required=""
+          value=""
+        />
+        <span
+          class="highlight"
+        />
+        <span
+          class="bar"
+        />
+        <label>
+          <!-- react-text: 8 -->
+          Nome
+          <!-- /react-text -->
+          <!-- react-text: 9 -->
+          :
+          <!-- /react-text -->
+        </label>
+      </div>
+      <div
+        class="text-component group undefined"
+      >
+        <input
+          type="text"
+          id="txtCpf"
+          name="txtCpf"
+          placeholder=""
+          required=""
+          value=""
+        />
+        <span
+          class="highlight"
+        />
+        <span
+          class="bar"
+        />
+        <label>
+          <!-- react-text: 15 -->
+          CPF
+          <!-- /react-text -->
+          <!-- react-text: 16 -->
+          :
+          <!-- /react-text -->
+        </label>
+      </div>
+      <div
+        class="text-component group undefined"
+      >
+        <input
+          type="text"
+          id="txtTelefone"
+          name="txtTelephone"
+          placeholder=""
+          required=""
+          value=""
+        />
+        <span
+          class="highlight"
+        />
+        <span
+          class="bar"
+        />
+        <label>
+          <!-- react-text: 22 -->
+          Telefone
+          <!-- /react-text -->
+          <!-- react-text: 23 -->
+          :
+          <!-- /react-text -->
+        </label>
+      </div>
+      <div
+        class="text-component group undefined"
+      >
+        <input
+          type="text"
+          id="txtAddress"
+          name="txtAddress"
+          placeholder=""
+          required=""
+          value=""
+        />
+        <span
+          class="highlight"
+        />
+        <span
+          class="bar"
+        />
+        <label>
+          <!-- react-text: 29 -->
+          Endereço
+          <!-- /react-text -->
+          <!-- react-text: 30 -->
+          :
+          <!-- /react-text -->
+        </label>
+      </div>
+      <div
+        class="map-component group undefined"
+      />
+      <div
+        class="text-component group undefined"
+      >
+        <input
+          type="text"
+          id="txtComplement"
+          name="txtComplement"
+          placeholder=""
+          required=""
+          value=""
+        />
+        <span
+          class="highlight"
+        />
+        <span
+          class="bar"
+        />
+        <label>
+          <!-- react-text: 37 -->
+          Complemento
+          <!-- /react-text -->
+          <!-- react-text: 38 -->
+          :
+          <!-- /react-text -->
+        </label>
+      </div>
+      <div
+        class="upload-component group undefined"
+      >
+        <input
+          type="file"
+          id="uplImage"
+          name="uplImage"
+        />
+      </div>
+      <div
+        class="image-component group undefined"
+      >
+        <img
+          name="imgAvatar"
+          alt="imgAvatar"
+        />
+      </div>
+      <div
+        class="button-component group undefined"
+      >
+        <button
+          id="btnSave"
+          type="button"
+          class="button primary"
+          value="Gravar"
+        >
+          <span
+            class="load fa fa-spinner"
+          />
+          <span
+            class="value"
+          >
+            Gravar
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

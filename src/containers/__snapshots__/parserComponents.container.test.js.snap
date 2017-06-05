@@ -24,9 +24,29 @@ exports[`default render parser component container 1`] = `
       />
       <label>
         <!-- react-text: 7 -->
-        txtFullname
+        :
         <!-- /react-text -->
-        <!-- react-text: 8 -->
+      </label>
+    </div>
+    <div
+      class="text-component group input"
+    >
+      <input
+        type="text"
+        id="txtAddress"
+        name="txtAddress"
+        placeholder=""
+        required=""
+        value=""
+      />
+      <span
+        class="highlight"
+      />
+      <span
+        class="bar"
+      />
+      <label>
+        <!-- react-text: 13 -->
         :
         <!-- /react-text -->
       </label>

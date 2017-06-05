@@ -8,7 +8,7 @@ export default class Text extends Component {
                 <input id={this.props.id} name={this.props.name} type="text" defaultValue={this.props.value} placeholder="" required />
                 <span className="highlight"></span>
                 <span className="bar"></span>
-                <label>{this.props.name}:</label>
+                <label>{this.props.label}:</label>
             </div>
         );
     }
