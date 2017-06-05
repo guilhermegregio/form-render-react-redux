@@ -25,7 +25,7 @@ exports[`default render app container 1`] = `
         />
         <label>
           <!-- react-text: 8 -->
-          txtFullname
+          Nome
           <!-- /react-text -->
           <!-- react-text: 9 -->
           :
@@ -51,7 +51,7 @@ exports[`default render app container 1`] = `
         />
         <label>
           <!-- react-text: 15 -->
-          txtCpf
+          CPF
           <!-- /react-text -->
           <!-- react-text: 16 -->
           :
@@ -77,7 +77,7 @@ exports[`default render app container 1`] = `
         />
         <label>
           <!-- react-text: 22 -->
-          txtTelephone
+          Telefone
           <!-- /react-text -->
           <!-- react-text: 23 -->
           :
@@ -103,7 +103,7 @@ exports[`default render app container 1`] = `
         />
         <label>
           <!-- react-text: 29 -->
-          txtAddress
+          Endereço
           <!-- /react-text -->
           <!-- react-text: 30 -->
           :
@@ -132,7 +132,7 @@ exports[`default render app container 1`] = `
         />
         <label>
           <!-- react-text: 37 -->
-          txtComplement
+          Complemento
           <!-- /react-text -->
           <!-- react-text: 38 -->
           :

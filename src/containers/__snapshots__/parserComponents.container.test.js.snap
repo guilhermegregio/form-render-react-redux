@@ -24,9 +24,6 @@ exports[`default render parser component container 1`] = `
       />
       <label>
         <!-- react-text: 7 -->
-        txtFullname
-        <!-- /react-text -->
-        <!-- react-text: 8 -->
         :
         <!-- /react-text -->
       </label>
@@ -49,10 +46,7 @@ exports[`default render parser component container 1`] = `
         class="bar"
       />
       <label>
-        <!-- react-text: 14 -->
-        txtAddress
-        <!-- /react-text -->
-        <!-- react-text: 15 -->
+        <!-- react-text: 13 -->
         :
         <!-- /react-text -->
       </label>

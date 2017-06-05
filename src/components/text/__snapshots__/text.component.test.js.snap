@@ -22,7 +22,7 @@ exports[`default render text component 1`] = `
     />
     <label>
       <!-- react-text: 6 -->
-      text
+      Text
       <!-- /react-text -->
       <!-- react-text: 7 -->
       :
