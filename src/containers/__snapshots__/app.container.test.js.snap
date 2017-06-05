@@ -85,6 +85,32 @@ exports[`default render app container 1`] = `
         </label>
       </div>
       <div
+        class="text-component group undefined"
+      >
+        <input
+          type="text"
+          id="txtAddress"
+          name="txtAddress"
+          placeholder=""
+          required=""
+          value=""
+        />
+        <span
+          class="highlight"
+        />
+        <span
+          class="bar"
+        />
+        <label>
+          <!-- react-text: 29 -->
+          txtAddress
+          <!-- /react-text -->
+          <!-- react-text: 30 -->
+          :
+          <!-- /react-text -->
+        </label>
+      </div>
+      <div
         class="map-component group undefined"
       />
       <div
@@ -105,10 +131,10 @@ exports[`default render app container 1`] = `
           class="bar"
         />
         <label>
-          <!-- react-text: 30 -->
+          <!-- react-text: 37 -->
           txtComplement
           <!-- /react-text -->
-          <!-- react-text: 31 -->
+          <!-- react-text: 38 -->
           :
           <!-- /react-text -->
         </label>

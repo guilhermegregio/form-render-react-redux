@@ -28,7 +28,8 @@ export default class AppContainer extends Component {
         };
 
         const components = this.props.fields.map(field => {
-            const comp = listComponents[field.type];
+            const type = field.type.match(/([a-z]+)/)[1];
+            const comp = listComponents[type];
 
             if (!comp) {
                 return null;
