@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render parser component container 1`] = `
+<div>
+  <div
+    data-reactroot=""
+  >
+    <div
+      class="text-component group input"
+    >
+      <input
+        type="text"
+        id="txtFullname"
+        name="txtFullname"
+        placeholder=""
+        required=""
+        value=""
+      />
+      <span
+        class="highlight"
+      />
+      <span
+        class="bar"
+      />
+      <label>
+        <!-- react-text: 7 -->
+        txtFullname
+        <!-- /react-text -->
+        <!-- react-text: 8 -->
+        :
+        <!-- /react-text -->
+      </label>
+    </div>
+    <div
+      class="map-component group map-renderer"
+    />
+    <div
+      class="upload-component group upload-button"
+    >
+      <input
+        type="file"
+        id="uplImage"
+        name="uplImage"
+      />
+    </div>
+    <div
+      class="image-component group image"
+    >
+      <img
+        name="imgAvatar"
+        alt="imgAvatar"
+      />
+    </div>
+    <div
+      class="button-component group input"
+    >
+      <button
+        id="btnSave"
+        type="button"
+        class="button primary"
+        value="Gravar"
+      >
+        <span
+          class="load fa fa-spinner"
+        />
+        <span
+          class="value"
+        >
+          Gravar
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

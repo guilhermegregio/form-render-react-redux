@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render upload component 1`] = `
+<div>
+  <div
+    data-reactroot=""
+    class="upload-component group upload"
+  >
+    <input
+      type="file"
+      id="upload"
+      name="upload"
+    />
+  </div>
+</div>
+`;
