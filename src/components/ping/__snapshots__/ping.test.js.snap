@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render app component 1`] = `
+<div>
+  <div
+    data-reactroot=""
+  >
+    <h2>
+      <!-- react-text: 3 -->
+      is pinging: 
+      <!-- /react-text -->
+      <!-- react-text: 4 -->
+      false
+      <!-- /react-text -->
+    </h2>
+    <button>
+      Start PING
+    </button>
+    <p>
+      Teste
+    </p>
+  </div>
+</div>
+`;

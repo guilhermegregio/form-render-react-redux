@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render ping container 1`] = `
+<div>
+  <div
+    data-reactroot=""
+  >
+    <h1>
+      Ping container
+    </h1>
+    <div>
+      <h2>
+        <!-- react-text: 5 -->
+        is pinging: 
+        <!-- /react-text -->
+        <!-- react-text: 6 -->
+        false
+        <!-- /react-text -->
+      </h2>
+      <button>
+        Start PING
+      </button>
+      <p>
+        Teste
+      </p>
+    </div>
+  </div>
+</div>
+`;
