@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class Button extends Component {
+import { submit } from '../../actions/formData.actions';
+
+class Button extends Component {
+
+    handleClick(e) {
+        e.preventDefault();
+        this.props.submit();
+    }
 
     render() {
         return (
             <div className={'button-component group ' + this.props.className}>
-                <button id={this.props.id} type="button" className="button primary" value={this.props.value}>
+                <button id={this.props.id} type="button" className="button primary" value={this.props.value} onClick={this.handleClick.bind(this)}>
                     <span className="load fa fa-spinner"></span>
                     <span className="value">{this.props.value}</span>
                 </button>
@@ -13,3 +21,12 @@ export default class Button extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+    return {};
+};
+
+export default connect(
+    mapStateToProps,
+    { submit }
+)(Button);
