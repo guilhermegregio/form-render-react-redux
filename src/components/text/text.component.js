@@ -7,13 +7,14 @@ import buildRegExpByMask from '../../mask';
 
 class Text extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.currentValue = null;
 
-        this.state = { value: '' };
+        this.state = { value: props.value || '' };
 
+        this.validate = this.validate.bind(this);
     }
 
     static contextTypes = {
@@ -23,6 +24,7 @@ class Text extends Component {
     handleChange(event) {
         this.setState({ value: event.target.value });
     }
+
     componentDidMount(nextProps) {
         const store = this.context.store;
 
@@ -50,11 +52,14 @@ class Text extends Component {
 
 
     }
-    /**
-     store.subscribe(START_VALIDATE)
-        dispatch(VALIDATE_ERROR, campo, value, error)
-        dispatch(VALIDATE_SUCCESS, campo, value)
-     */
+
+    validate() {
+        return this.state.value;
+    }
+
+    getValue() {
+        return this.state.value;
+    }
 
     render() {
         return (
@@ -74,5 +79,7 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { validateError, validateSuccess }
+    { validateError, validateSuccess },
+    null,
+    { withRef: true }
 )(Text);

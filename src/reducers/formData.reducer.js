@@ -1,9 +1,17 @@
 import { SUBMIT, START_VALIDATE, VALIDATE_ERROR, VALIDATE_SUCCESS } from '../actions/formData.actions';
 
 export const submitEpic = action$ =>
-  action$.ofType(SUBMIT)
+  action$.combineLatest(actions=>{
+    actions.ofType(SUBMIT)
     .mapTo({ type: START_VALIDATE })
     .debounceTime(1000);
+  })
+  
+
+    // .mergeMap(action=>{
+    //   console.log(action);
+    // })
+    
 
 const behaviors = {
   [SUBMIT](state, action) {

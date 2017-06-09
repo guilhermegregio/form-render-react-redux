@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
+import configureStore from '../store/store';
 
 import ParserComponentsContainer from './parserComponents.container';
+
+const store = configureStore();
 
 const textField = {
     name: 'txtFullname',
@@ -50,7 +55,7 @@ const mapField = {
 
 it('default render parser component container', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<ParserComponentsContainer fields={[textField, textAddressField, mapField, uploadField, imageField, buttonField]} />, div);
+    ReactDOM.render(<Provider store={store}><ParserComponentsContainer fields={[textField, textAddressField, mapField, uploadField, imageField, buttonField]} /></Provider>, div);
 
     expect(div).toMatchSnapshot();
 });

@@ -6,7 +6,19 @@ import Map from '../components/map/map.component';
 import Text from '../components/text/text.component';
 import Upload from '../components/upload/upload.component';
 
+import { createFields, getInstance } from '../infraestruture/fieldsInstance';
+
 export default class AppContainer extends Component {
+
+    componentDidMount() {
+        createFields(this.refs);
+
+        getInstance().getValues();
+    }
+
+    componentWillUnmount() {
+        console.log(this.refs);
+    }
 
     render() {
         return (
@@ -35,7 +47,7 @@ export default class AppContainer extends Component {
                 return null;
             }
 
-            return React.createElement(comp, { ...field, key: index++ });
+            return React.createElement(comp, { ...field, key: index++, ref: field.id });
         });
 
         return this.props.fields.length > 0 ? components : <p>Sem fields</p>;
