@@ -9,11 +9,12 @@ class FieldsWraper {
     validate() {
         const { fields } = this;
 
-        const isValid = fields.reduce((isValid, field) => {
-            const isValidField = field.instance.validate || identityFn(true);
-
-            return isValid && isValidField();
-        }, true);
+        const isValid = fields
+            .map(field => {
+                const isValidField = field.instance.validate || identityFn(true);
+                return isValidField();
+            })
+            .reduce((isValidAcc, isValid) => isValidAcc && isValid, true);
 
         return isValid;
     }

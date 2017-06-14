@@ -20,6 +20,7 @@ class Text extends Component {
     }
 
     validate() {
+        console.log(this.props.id);
         const isValid = this.state.value.length > 1;
 
         this.setState({ isValid });
