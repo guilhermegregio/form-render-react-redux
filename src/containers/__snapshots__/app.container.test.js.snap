@@ -7,7 +7,7 @@ exports[`default render app container 1`] = `
   >
     <div>
       <div
-        class="text-component group undefined"
+        class="text-component group input valid"
       >
         <input
           type="text"
@@ -33,7 +33,7 @@ exports[`default render app container 1`] = `
         </label>
       </div>
       <div
-        class="text-component group undefined"
+        class="text-component group input valid"
       >
         <input
           type="text"
@@ -59,7 +59,7 @@ exports[`default render app container 1`] = `
         </label>
       </div>
       <div
-        class="text-component group undefined"
+        class="text-component group input valid"
       >
         <input
           type="text"
@@ -85,7 +85,7 @@ exports[`default render app container 1`] = `
         </label>
       </div>
       <div
-        class="text-component group undefined"
+        class="text-component group input valid"
       >
         <input
           type="text"
@@ -111,10 +111,10 @@ exports[`default render app container 1`] = `
         </label>
       </div>
       <div
-        class="map-component group undefined"
+        class="map-component group map-renderer"
       />
       <div
-        class="text-component group undefined"
+        class="text-component group input valid"
       >
         <input
           type="text"
@@ -140,7 +140,7 @@ exports[`default render app container 1`] = `
         </label>
       </div>
       <div
-        class="upload-component group undefined"
+        class="upload-component group upload-button"
       >
         <input
           type="file"
@@ -149,7 +149,7 @@ exports[`default render app container 1`] = `
         />
       </div>
       <div
-        class="image-component group undefined"
+        class="image-component group image"
       >
         <img
           name="imgAvatar"
@@ -157,7 +157,7 @@ exports[`default render app container 1`] = `
         />
       </div>
       <div
-        class="button-component group undefined"
+        class="button-component group input"
       >
         <button
           id="btnSave"

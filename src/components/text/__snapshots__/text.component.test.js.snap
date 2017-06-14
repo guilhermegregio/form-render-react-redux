@@ -4,7 +4,7 @@ exports[`default render text component 1`] = `
 <div>
   <div
     data-reactroot=""
-    class="text-component group text"
+    class="text-component group text valid"
   >
     <input
       type="text"

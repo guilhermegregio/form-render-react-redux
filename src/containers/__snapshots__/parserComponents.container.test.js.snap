@@ -6,7 +6,7 @@ exports[`default render parser component container 1`] = `
     data-reactroot=""
   >
     <div
-      class="text-component group input"
+      class="text-component group input valid"
     >
       <input
         type="text"
@@ -29,7 +29,7 @@ exports[`default render parser component container 1`] = `
       </label>
     </div>
     <div
-      class="text-component group input"
+      class="text-component group input valid"
     >
       <input
         type="text"
