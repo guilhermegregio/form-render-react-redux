@@ -10,11 +10,8 @@ class FieldsWraper {
         const { fields } = this;
 
         const isValid = fields
-            .map(field => {
-                const isValidField = field.instance.validate || identityFn(true);
-                return isValidField();
-            })
-            .reduce((isValidAcc, isValid) => isValidAcc && isValid, true);
+            .map(toBooleanCallValidateOfComponent)
+            .reduce(operateAndLogic, true);
 
         return isValid;
     }
@@ -22,11 +19,20 @@ class FieldsWraper {
     getValues() {
         const { fields } = this;
 
-        const result = fields.map(toFieldIdValue).reduce(toObjectValues, {});
+        const result = fields
+            .map(toFieldIdValue)
+            .reduce(toObjectValues, {});
 
         return result;
     }
 }
+
+const operateAndLogic = (isValidAcc, isValid) => isValidAcc && isValid;
+
+const toBooleanCallValidateOfComponent = field => {
+    const isValidField = field.instance.validate || identityFn(true);
+    return isValidField();
+};
 
 const toObjectValues = (acc, field) => {
     return { ...acc, [field.id]: field.value }
