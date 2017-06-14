@@ -1,43 +1,25 @@
-import { SUBMIT, START_VALIDATE, VALIDATE_ERROR, VALIDATE_SUCCESS } from '../actions/formData.actions';
+import { SUBMIT } from '../actions/formData.actions';
+import * as fieldsWrap from '../infraestruture/fieldsInstance';
 
-export const submitEpic = action$ =>
-  action$.combineLatest(actions=>{
-    actions.ofType(SUBMIT)
-    .mapTo({ type: START_VALIDATE })
-    .debounceTime(1000);
-  })
-  
-
-    // .mergeMap(action=>{
-    //   console.log(action);
-    // })
-    
+import datasource from '../infraestruture/datasource';
 
 const behaviors = {
   [SUBMIT](state, action) {
-    console.log(state, action);
+    const isValid = fieldsWrap.getInstance().validate();
+    const values = fieldsWrap.getInstance().getValues();
+    const data = [...state.data, values];
 
-    return { ...state, fields: [...state.fields] };
-  },
-  [START_VALIDATE](state, action) {
-    console.log(state, action);
+    if (!isValid) {
+      return state;
+    }
 
-    return { ...state, fields: [...state.fields] };
-  },
-  [VALIDATE_ERROR](state, action) {
-    console.log(state, action);
+    datasource.store(data);
 
-    return { ...state, fields: [...state.fields] };
-  },
-  [VALIDATE_SUCCESS](state, action) {
-    console.log(state, action);
-    const { field, value } = action.payload;
-
-    return { ...state, fields: [...state.fields, { field, value, error: false }] };
-  },
+    return { ...state, data };
+  }
 };
 
-const reducer = (state = { lastAction: '', fields: [] }, action) => {
+const reducer = (state = { lastAction: '', data: [] }, action) => {
   state.lastAction = action.type;
   const behavior = behaviors[action.type]
   return behavior ? behavior(state, action) : state

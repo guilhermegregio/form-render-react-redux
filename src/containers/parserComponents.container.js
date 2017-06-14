@@ -6,18 +6,12 @@ import Map from '../components/map/map.component';
 import Text from '../components/text/text.component';
 import Upload from '../components/upload/upload.component';
 
-import { createFields, getInstance } from '../infraestruture/fieldsInstance';
+import * as fieldsWrap from '../infraestruture/fieldsInstance';
 
 export default class AppContainer extends Component {
 
     componentDidMount() {
-        createFields(this.refs);
-
-        getInstance().getValues();
-    }
-
-    componentWillUnmount() {
-        console.log(this.refs);
+        fieldsWrap.createFields(this.refs);
     }
 
     render() {

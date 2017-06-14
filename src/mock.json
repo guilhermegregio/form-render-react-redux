@@ -6,7 +6,7 @@
 			"id": "txtFullname",
 			"value": "",
 			"type": "text",
-			"class": "input"
+			"className": "input"
 		},
 		{
 			"label": "CPF",
@@ -15,7 +15,7 @@
 			"value": "",
 			"type": "text",
 			"mask": "000.000.000-00",
-			"class": "input"
+			"className": "input"
 		},
 		{
 			"label": "Telefone",
@@ -24,7 +24,7 @@
 			"value": "",
 			"type": "text",
 			"mask": "(00) 00000-0000",
-			"class": "input"
+			"className": "input"
 		},
 		{
 			"label": "Endereço",
@@ -32,13 +32,13 @@
 			"id": "txtAddress",
 			"value": "",
 			"type": "text:address",
-			"class": "input"
+			"className": "input"
 		},
 		{
 			"type": "map",
 			"name": "mapRenderer",
 			"id": "mapRenderer",
-			"class": "map-renderer"
+			"className": "map-renderer"
 		},
 		{
 			"label": "Complemento",
@@ -46,27 +46,27 @@
 			"id": "txtComplement",
 			"value": "",
 			"type": "text",
-			"class": "input"
+			"className": "input"
 		},
 		{
 			"label": "Imagem",
 			"type": "upload",
 			"name": "uplImage",
 			"id": "uplImage",
-			"class": "upload-button"
+			"className": "upload-button"
 		},
 		{
 			"type": "image",
 			"name": "imgAvatar",
 			"id": "imgAvatar",
-			"class": "image"
+			"className": "image"
 		},
 		{
 			"type": "button",
 			"name": "btnSave",
 			"id": "btnSave",
 			"value": "Gravar",
-			"class": "input"
+			"className": "input"
 		}
 	]
 }

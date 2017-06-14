@@ -9,32 +9,57 @@ class FieldsWraper {
     validate() {
         const { fields } = this;
 
-        console.log(fields);
+        const isValid = fields.reduce((isValid, field) => {
+            const isValidField = field.instance.validate || identityFn(true);
+
+            return isValid && isValidField();
+        }, true);
+
+        return isValid;
     }
 
     getValues() {
-        let request = {};
-
         const { fields } = this;
 
-        fields.map(field => {
-            const { getValue } = field.instance;
-            console.log(getValue);
+        const result = fields.map(toFieldIdValue).reduce(toObjectValues, {});
 
-            return {
-                ...field,
-                value: getValue()
-            };
-        }).forEach(field => {
-            console.log(field);
-            request[field.field] = field.value
-        });
-
-        console.log(request);
+        return result;
     }
 }
 
-const getInstanceFields = (fields) => Object.keys(fields).map(key => ({ fields: key, instance: fields[key].getWrappedInstance() }));
+const toObjectValues = (acc, field) => {
+    return { ...acc, [field.id]: field.value }
+};
+
+const toFieldIdValue = field => {
+    const getValue = field.instance.getValue || noop;
+
+    return {
+        id: field.id,
+        value: getValue()
+    }
+};
+
+const identityFn = prop => () => prop;
+const noop = () => { };
+
+const getInstanceFields = (fields) => Object.keys(fields).map(key => {
+    const scope = fields[key];
+    const getInstance = scope.getWrappedInstance || noop;
+
+    let instanceFunction = {};
+
+    try {
+        instanceFunction = getInstance.apply(scope);
+    } catch (err) {
+    }
+
+    return {
+        id: key,
+        instance: instanceFunction || {}
+    }
+});
+
 
 export const createFields = (fields) => {
     instance = new FieldsWraper(fields);

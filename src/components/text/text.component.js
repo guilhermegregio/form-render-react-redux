@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-
-import { SUBMIT, validateError, validateSuccess } from '../../actions/formData.actions';
-import buildRegExpByMask from '../../mask';
 
 class Text extends Component {
 
@@ -12,49 +8,23 @@ class Text extends Component {
 
         this.currentValue = null;
 
-        this.state = { value: props.value || '' };
+        this.state = { value: props.value || '', isValid: true };
 
         this.validate = this.validate.bind(this);
-    }
-
-    static contextTypes = {
-        store: PropTypes.object
+        this.handleChange = this.handleChange.bind(this);
+        this.getValue = this.getValue.bind(this);
     }
 
     handleChange(event) {
         this.setState({ value: event.target.value });
     }
 
-    componentDidMount(nextProps) {
-        const store = this.context.store;
-
-        store.subscribe(this.onValidateStart.bind(this));
-    }
-
-    onValidateStart() {
-        if (this.context.store.getState().formDataReducer.lastAction !== SUBMIT) {
-            return;
-        }
-
-        if (!this.props.mask) {
-            setTimeout(() => this.props.validateSuccess(this.props.id, this.props.value), 1);
-        } else {
-            let er = buildRegExpByMask(this.props.mask);
-
-            let valid = er.test(this.state.value);
-
-            if (!valid) {
-                setTimeout(() => this.props.validateError(this.props.id, this.state.value, 'Campo inválido'), 1);
-            } else {
-                setTimeout(() => this.props.validateSuccess(this.props.id, this.state.value), 1);
-            }
-        }
-
-
-    }
-
     validate() {
-        return this.state.value;
+        const isValid = this.state.value.length > 1;
+
+        this.setState({ isValid });
+
+        return isValid;
     }
 
     getValue() {
@@ -63,8 +33,8 @@ class Text extends Component {
 
     render() {
         return (
-            <div className={'text-component group ' + this.props.className}>
-                <input id={this.props.id} name={this.props.name} type="text" placeholder="" required ref={(ref) => this.input = ref} value={this.state.value} onChange={this.handleChange.bind(this)} />
+            <div className={'text-component group ' + this.props.className + ' ' + (this.state.isValid ? 'valid' : 'invalid')}>
+                <input id={this.props.id} name={this.props.name} type="text" placeholder="" required ref={(ref) => this.input = ref} value={this.state.value} onChange={this.handleChange} />
                 <span className="highlight"></span>
                 <span className="bar"></span>
                 <label>{this.props.label}:</label>
@@ -79,7 +49,7 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { validateError, validateSuccess },
+    {},
     null,
     { withRef: true }
 )(Text);
